@@ -27,4 +27,20 @@ If isSignIn === false, it changes to "Already have an account? Sign In".
 Dynamic Content
 
 The title (Sign In / Sign Up) and button text update dynamically.
-The Full Name input is only shown for Sign Up
+The Full Name input is only shown for Sign 
+
+-form Validation
+-useRef
+
+checkValidData(email, password)
+
+Uses regex to validate:
+Email format (example@domain.com).
+Password (at least 8 characters, 1 uppercase, 1 lowercase, and 1 number).
+Returns an error message if invalid, else null.
+handleButtonClick()
+
+Retrieves email & password values from useRef.
+Calls checkValidData() to validate inputs.
+Logs the validation result.
+This approach ensures basic client-side validation before form submission.
