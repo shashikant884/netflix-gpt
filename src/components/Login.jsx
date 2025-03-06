@@ -7,14 +7,21 @@ const Login = () => {
     const email = useRef(null);
     const password = useRef(null);
     const [isSignIn , setIsSignIn] = useState(true);
+    const [errorMessage , setErrorMessage] = useState(null);
 
     const handleButtnClick = () =>{
         console.log(email.current.value)
         console.log(password.current.value);
 
         const message = checkValidData(email.current.value , password.current.value);
-        console.log(message);
 
+        setErrorMessage(message);
+
+        // if(message){
+        //     setErrorMessage(message);
+        // }else{
+        //     setErrorMessage("");
+        // }
 
     }
 
@@ -34,6 +41,7 @@ const Login = () => {
                     )}
                 <input type="text" placeholder="Email Address " className="p-4 my-4 w-full bg-gray-700" ref={email} />
                 <input type="password" placeholder="Password " className="p-4 my-4 w-full bg-gray-700" ref={password} />
+                {errorMessage && <p className="text-red-500">{errorMessage}</p>}
             <button className="p-4 my-6 bg-red-700 w-full rounded-lg" onClick={handleButtnClick}>{isSignIn ? "Sign In" : "Sign Up"}</button>
                 <p className="py-4 cursor-pointer" onClick={()=>{setIsSignIn(!isSignIn)}}>{isSignIn ? "New to Netflix? Sign Up Now" : "Already Have accunt? Sign In" }</p>
 
