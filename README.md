@@ -52,3 +52,9 @@ This approach ensures basic client-side validation before form submission.
 - firebase init
 - npm run build
 - firebase deploy
+
+- npm i @reduxjs/toolkit
+- npm install react-redux
+
+Created a Redux store with userSlice
+Provided appStore to the <Provider> in your app
