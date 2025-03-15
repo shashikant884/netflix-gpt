@@ -58,3 +58,5 @@ This approach ensures basic client-side validation before form submission.
 
 Created a Redux store with userSlice
 Provided appStore to the <Provider> in your app
+
+Emplemented sign Out 
