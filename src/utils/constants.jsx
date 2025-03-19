@@ -6,3 +6,20 @@ export const USER_AVATAR =
 
 export const BG_URL =
   "https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg";
+
+export const icon =
+  "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg";
+
+export const API_APTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YjdlYzZhZWZlYjA4ZWYzZmE3YjlkOTE3MTMxMTIxOCIsIm5iZiI6MTc0MjIzOTY0Ni42ODcsInN1YiI6IjY3ZDg3NzllNjQ1NzgwMzY4OWYxNTdmOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jZCXCqdYCBtnJS74uYv8jklNaluWJjQWhg58Az6Pkmk",
+  },
+};
+
+// export const api_lnk =
+//   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YjdlYzZhZWZlYjA4ZWYzZmE3YjlkOTE3MTMxMTIxOCIsIm5iZiI6MTc0MjIzOTY0Ni42ODcsInN1YiI6IjY3ZDg3NzllNjQ1NzgwMzY4OWYxNTdmOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jZCXCqdYCBtnJS74uYv8jklNaluWJjQWhg58Az6Pkmk";
+
+// exposrt const api_key = "4b7ec6aefeb08ef3fa7b9d9171311218";

@@ -1,7 +1,7 @@
 -npm create vite@latest netflix-gpt -- --template react
--install tailwind amd configure 
-    -npm install -D tailwindcss@3 postcss autoprefixer
-    -npx tailwindcss init -p
+-install tailwind amd configure
+-npm install -D tailwindcss@3 postcss autoprefixer
+-npx tailwindcss init -p
 -npm run dev
 
 -install : npm i react-router-dom
@@ -27,7 +27,7 @@ If isSignIn === false, it changes to "Already have an account? Sign In".
 Dynamic Content
 
 The title (Sign In / Sign Up) and button text update dynamically.
-The Full Name input is only shown for Sign 
+The Full Name input is only shown for Sign
 
 -form Validation
 -useRef
@@ -46,7 +46,7 @@ Logs the validation result.
 This approach ensures basic client-side validation before form submission.
 
 - npm install firebase
-- firebase deploye 
+- firebase deploye
 - npm install -g firebase-tools
 - firebase login
 - firebase init
@@ -59,4 +59,41 @@ This approach ensures basic client-side validation before form submission.
 Created a Redux store with userSlice
 Provided appStore to the <Provider> in your app
 
-Emplemented sign Out 
+Emplemented sign Out
+Profile update
+
+- BugFix: Sign up user displayName and profile picture update
+- BugFix: if the user is not logged in Redirect /browse to Login Page and vice-versa
+
+- unsubscribe onAuthStateChanged
+  onAuthStateChanged sets up a listener for auth changes.
+  It returns an unsubscribe function.
+  The cleanup function (return () => unsubscribe();) ensures the listener is removed when the component unmounts.
+
+# Body Component
+
+Manages routing using react-router-dom.
+Defines two routes:
+/ → Renders the Login component.
+/browse → Renders the Browse component.
+
+# Header Component
+
+Displays the app logo and user profile (if logged in).
+Listens for Firebase authentication changes using onAuthStateChanged.
+Updates Redux store with user info when logged in or removes it when logged out.
+Provides a Sign Out button that calls signOut(auth).
+
+# Login Component
+
+Renders a sign-in/sign-up form with email & password inputs.
+Uses Firebase authentication (signInWithEmailAndPassword, createUserWithEmailAndPassword).
+Stores signed-in user data in Redux.
+Toggles between Sign In & Sign Up modes.
+Displays error messages for invalid credentials.
+Together, these components handle authentication, navigation, and user state management.
+
+# Login TMDB webside
+
+Create and app to get access of API Read Access Token and API key
+get data form TMDB now playing movies list api
