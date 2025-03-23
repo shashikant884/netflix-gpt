@@ -8,23 +8,29 @@ const SecondartContainer = () => {
   //   // const posterPath = movies.nowPlayingMovies[0].poseter_path;
   //   console.log(movies[0].nowPlayingMovies);
 
-  const movies = useSelector((store) => store.movies?.nowPlayingMovies);
+  const movies = useSelector((store) => store.movies);
 
   if (!movies) return;
   // const posterImg = movies[0];
   // const { original_title, overview, id } = mainMovie; // Destructure from mainMovie
   // console.log(posterImg.poster_path);
+  console.log(movies);
 
   return (
-    <div className="bg-black">
-      <div className="-mt-50 relative z-20">
-        <MovieLsit title={"Now Playing"} movies={movies} />
-        <MovieLsit title={"Traending"} movies={movies} />
-        <MovieLsit title={"Popular"} movies={movies} />
-        <MovieLsit title={"Upcoming Movies"} movies={movies} />
-        <MovieLsit title={"Horror"} movies={movies} />
+    movies.nowPlayingMovies && (
+      <div className="bg-black">
+        <div className="-mt-50 relative z-20">
+          <MovieLsit title={"Now Playing"} movies={movies.nowPlayingMovies} />
+          <MovieLsit title={"Traending"} movies={movies.nowPlayingMovies} />
+          <MovieLsit title={"Popular"} movies={movies.popularMovies} />
+          <MovieLsit
+            title={"Upcoming Movies"}
+            movies={movies.nowPlayingMovies}
+          />
+          <MovieLsit title={"Horror"} movies={movies.nowPlayingMovies} />
+        </div>
       </div>
-    </div>
+    )
   );
 };
 
