@@ -6,7 +6,6 @@ const appStore = configureStore({
     user: userReducer,
     movies: moviesReducer,
   },
-  devTools: true, // This should be enabled
 });
 
 export default appStore;

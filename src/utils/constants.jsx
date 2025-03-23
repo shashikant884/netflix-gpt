@@ -19,7 +19,4 @@ export const API_APTIONS = {
   },
 };
 
-// export const api_lnk =
-//   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YjdlYzZhZWZlYjA4ZWYzZmE3YjlkOTE3MTMxMTIxOCIsIm5iZiI6MTc0MjIzOTY0Ni42ODcsInN1YiI6IjY3ZDg3NzllNjQ1NzgwMzY4OWYxNTdmOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jZCXCqdYCBtnJS74uYv8jklNaluWJjQWhg58Az6Pkmk";
-
-// exposrt const api_key = "4b7ec6aefeb08ef3fa7b9d9171311218";
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
