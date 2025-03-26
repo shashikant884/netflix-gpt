@@ -14,7 +14,6 @@ const SecondartContainer = () => {
   // const posterImg = movies[0];
   // const { original_title, overview, id } = mainMovie; // Destructure from mainMovie
   // console.log(posterImg.poster_path);
-  console.log(movies);
   if (!movies.popularMovies) return;
 
   return (

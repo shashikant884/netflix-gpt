@@ -1,7 +1,6 @@
 import MovieCard from "./MovieCard";
 
 const MovieLsit = ({ title, movies }) => {
-  console.log(movies);
   return (
     <div className="p-2">
       <h1 className="text-xl py-2 text-white">{title}</h1>
