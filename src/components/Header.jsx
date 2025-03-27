@@ -9,6 +9,7 @@ import { toggleGptSearchView } from "../utils/GptSlice";
 import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
+  const showGptSearch = useSelector((store) => store?.gpt?.showGptSearch);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
@@ -46,7 +47,6 @@ const Header = () => {
   };
 
   const handeleLanguageChange = (e) => {
-    console.log(e.target.value);
     dispatch(changeLanguage(e.target.value));
   };
 
@@ -55,21 +55,23 @@ const Header = () => {
       <img className="w-44" src={LOGO} alt="Logo" />
       {user && (
         <div className="flex p-2 ">
-          <select
-            className="test-white bg-red-800 m-2 px-4 py-4"
-            onChange={handeleLanguageChange}
-          >
-            {LANGUAGE_SUPPOTED.map((lang) => (
-              <option value={lang.identifier} key={lang.identifier}>
-                {lang.name}
-              </option>
-            ))}
-          </select>
+          {showGptSearch && (
+            <select
+              className="test-white bg-red-800 m-2 px-4 py-4"
+              onChange={handeleLanguageChange}
+            >
+              {LANGUAGE_SUPPOTED.map((lang) => (
+                <option value={lang.identifier} key={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
           <button
             className="text-white bg-purple-700 px-4 py-2 mx-4 my-2"
             onClick={handleGptSearchClick}
           >
-            GPT Search
+            {!showGptSearch ? "GPT Search" : "Home Page"}
           </button>
           <img className="h-12 w-12 m-2" alt="userIcon" src={USER_AVATAR} />
           <button onClick={handleSignOut} className="font-bold text-white">
